@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #e9dfae;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, .07) 50%, transparent 50%), linear-gradient(90deg, rgba(255, 255, 255, .13) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .17) 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .19) 50%);
+    background-size: 13px, 29px, 37px, 53px;
+    color: black;
+}
+
+:root {
+    --holy-content-background-color: #557398;
+    --holy-header-background-color: #557398;
+    --holy-aside-background-color: #557398;
+    --holy-footer-background-color: #557398;
+    --holy-nav-background-color: #557398;
+    --header-bg-color: yellow;
+    --radh-user-login-color: white;
+    --radh-user-name-color: white;
+    --header-color: red;
+}
+
+.c-card--menu[role=menu] {
+    max-height: 100%;
+}
+
+radh-modal {
+    --background-color: grey;
+    --header-bg-color: red;
+}
+
+radh-auth {
+    color: red;
+}
+
+.validation-error {
+    font-size: 1.4rem;
+    color: darkred;
+}
+
+h1, h2, p, #hello, radh-version, radh-holy span {
+    color: black;
+}
+
+.debug {
+    border: 2px solid red;
+}
+
+img {
+    width: 200px;
+}

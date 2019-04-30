@@ -1,0 +1,16 @@
+<radh-holy>
+  <div slot="header">
+    <span>Radh-UI</span>
+    <radh-version></radh-version>
+  </div>
+  <div slot="nav">
+    <app-nav></app-nav>
+  </div>
+  <div slot="aside"></div>
+  <div slot="section">
+    <router-outlet></router-outlet>
+  </div>
+  <div slot="footer">
+    <radh-auth (userInfo)="getUserInfo($event)"></radh-auth>
+  </div>
+</radh-holy>

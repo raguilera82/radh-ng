@@ -1,0 +1,8 @@
+:host {
+    --radh-user-name-color: white;
+    --radh-user-login-color: blue;
+}
+
+img {
+    width: 200px;
+}

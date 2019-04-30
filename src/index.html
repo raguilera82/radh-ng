@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>Demo</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="radh-ui/radh-ui.js"></script>
+  <script src="radh-ui/collection/assets/@blaze/atoms/dist/blaze-atoms.js"></script>
+  <link rel="stylesheet" href="radh-ui/collection/assets/@blaze/css/dist/blaze.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyD24HG4JTZ-rl4N1vG3qsJIqk1xt9c_pBQ",
+      authDomain: "market-4b6d2.firebaseapp.com",
+      databaseURL: "https://market-4b6d2.firebaseio.com",
+      projectId: "market-4b6d2",
+      storageBucket: "market-4b6d2.appspot.com",
+      messagingSenderId: "289036516322"
+    });
+    const firestore = firebase.firestore();
+    const settings = { timestampsInSnapshots: true };
+    firestore.settings(settings);
+  </script>
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>

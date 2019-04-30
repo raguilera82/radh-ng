@@ -1,0 +1,7 @@
+<radh-url-code></radh-url-code>
+
+<hr />
+
+<radh-fluid-grid>
+    <radh-user *ngFor="let user of (users$ | async)" [user]="user | json"></radh-user>
+</radh-fluid-grid>
