@@ -4,7 +4,7 @@ import { forkJoin, Observable, of } from 'rxjs';
 import { map, mergeMap } from 'rxjs/operators';
 import { User, UserCard, UserExtra } from './model';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class CodeExampleService {
 
   constructor(private httpClient: HttpClient) { }

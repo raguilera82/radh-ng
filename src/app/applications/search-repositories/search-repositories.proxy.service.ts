@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { GitHubRepositories } from './model';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class SearchRepositoriesProxyService {
 
-
     constructor(private httpClient: HttpClient) { }
-
 
     fetchRepositories(query: string): Observable<GitHubRepositories> {
         const params = { q: query };
