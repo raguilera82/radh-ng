@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demo';
+  title = 'radh-ng';
 
   getUserInfo(ev) {
     console.log(ev.detail);
