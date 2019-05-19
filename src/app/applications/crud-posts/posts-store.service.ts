@@ -31,8 +31,10 @@ export class PostsStoreService extends Store<Post[]> {
         return this.service.updatePost(postId, post).pipe(
             tap(() => {
                 const posts = this.get();
-                posts[this.searchIndex(posts, postId)] = post;
-                this.store(posts);
+                const p = Object.assign({}, post);
+                const index = this.searchIndex(posts, postId);
+                const newPosts = [...posts.slice(0, index), p, ...posts.slice(index + 1)];
+                this.store(newPosts);
             })
         ).toPromise();
     }
@@ -41,8 +43,8 @@ export class PostsStoreService extends Store<Post[]> {
         return this.service.deletePost(postId).pipe(
             tap(() => {
                 const posts = this.get();
-                posts.splice(this.searchIndex(posts, postId), 1);
-                this.store(posts);
+                const newPosts = posts.filter(post => post.postId !== postId);
+                this.store(newPosts);
             })
         ).toPromise();
     }

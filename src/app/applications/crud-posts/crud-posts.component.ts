@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/internal/Observable';
 import { Post } from './post';
@@ -27,7 +27,8 @@ import { PostsStoreService } from './posts-store.service';
                 <button (click)="onSelect(post)">Selec</button>
             </div>
         </div>
-    `
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CrudPostsComponent implements OnInit {
 
